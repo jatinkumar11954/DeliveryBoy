@@ -23,9 +23,10 @@ class HomeScreen extends StatelessWidget {
                 width: w * 0.7,
                 height: 50,
                 child: RaisedButton(
-                                  color: Colors.redAccent,
-
-                  onPressed: () {},
+                  color: Colors.redAccent,
+                  onPressed: () {
+                    Navigator.pushNamed(context, "gmap");
+                  },
                   child: Text("Checkout"),
                 ),
               )),
@@ -59,7 +60,11 @@ class HomeScreen extends StatelessWidget {
                     child: CircleAvatar(
                       backgroundColor: Colors.green,
                       radius: 5,
-                      child: Icon(Icons.new_releases,color: Colors.white,size: 40,),
+                      child: Icon(
+                        Icons.new_releases,
+                        color: Colors.white,
+                        size: 40,
+                      ),
                     ),
                   ),
                   footer: Center(
@@ -94,7 +99,11 @@ class HomeScreen extends StatelessWidget {
                     child: CircleAvatar(
                       backgroundColor: Colors.green,
                       radius: 5,
-                      child: Icon(Icons.bookmark,color: Colors.white,size: 40,),
+                      child: Icon(
+                        Icons.bookmark,
+                        color: Colors.white,
+                        size: 40,
+                      ),
                     ),
                   ),
                   footer: Center(
@@ -135,7 +144,11 @@ class HomeScreen extends StatelessWidget {
                     child: CircleAvatar(
                       backgroundColor: Colors.green,
                       radius: 5,
-                      child: Icon(Icons.timer,color: Colors.white,size: 40,),
+                      child: Icon(
+                        Icons.timer,
+                        color: Colors.white,
+                        size: 40,
+                      ),
                     ),
                   ),
                   footer: Center(
@@ -170,7 +183,11 @@ class HomeScreen extends StatelessWidget {
                     child: CircleAvatar(
                       backgroundColor: Colors.green,
                       radius: 5,
-                      child: Icon(Icons.attach_money,color: Colors.white,size: 40,),
+                      child: Icon(
+                        Icons.attach_money,
+                        color: Colors.white,
+                        size: 40,
+                      ),
                     ),
                   ),
                   footer: Center(
@@ -211,7 +228,11 @@ class HomeScreen extends StatelessWidget {
                     child: CircleAvatar(
                       backgroundColor: Colors.green,
                       radius: 5,
-                      child: Icon(Icons.person,color: Colors.white,size: 40,),
+                      child: Icon(
+                        Icons.person,
+                        color: Colors.white,
+                        size: 40,
+                      ),
                     ),
                   ),
                   footer: Center(
@@ -246,7 +267,11 @@ class HomeScreen extends StatelessWidget {
                     child: CircleAvatar(
                       backgroundColor: Colors.green,
                       radius: 5,
-                      child: Icon(Icons.info_outline,color: Colors.white,size: 40,),
+                      child: Icon(
+                        Icons.info_outline,
+                        color: Colors.white,
+                        size: 40,
+                      ),
                     ),
                   ),
                   footer: Center(

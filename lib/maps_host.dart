@@ -118,7 +118,8 @@ class MapsHostState extends State<MapsHost> {
                                 target: LatLng(currentLocation?.latitude ?? 0,
                                     currentLocation?.longitude ?? 0),
                                 zoom: 17),
-                            onMapCreated: (m) {
+                            onMapCreated: (m) async{
+                              currentLocation = await location.getLocation();
                               setState(() {
                                 m.animateCamera(
                                   CameraUpdate.newCameraPosition(

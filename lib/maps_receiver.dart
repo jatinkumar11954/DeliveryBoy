@@ -48,16 +48,14 @@ class MapsReceiverState extends State<MapsReceiver> {
         currentLatitude = event.snapshot.value['latitude'];
         currentLongitude = event.snapshot.value['longitude'];
       });
-  
+
       _markers.clear();
       final marker = Marker(
         markerId: MarkerId("curr_loc"),
-        position:
-            LatLng(currentLatitude, currentLongitude),
+        position: LatLng(currentLatitude, currentLongitude),
         infoWindow: InfoWindow(title: 'Delivery'),
       );
       _markers["Current Location"] = marker;
-     
     });
   }
 
@@ -66,6 +64,8 @@ class MapsReceiverState extends State<MapsReceiver> {
       mapController = controller;
     });
   }
+
+  Location locationobj = Location();
 
   @override
   Widget build(BuildContext context) {
@@ -80,12 +80,23 @@ class MapsReceiverState extends State<MapsReceiver> {
                   width: double.infinity,
                   height: 350.0,
                   child: GoogleMap(
-                    markers: _markers.values.toSet(),
-                    initialCameraPosition: CameraPosition(
-                        target: LatLng(currentLatitude, currentLongitude),
-                        zoom: 17),
-                    onMapCreated: _onMapCreated,
-                  ),
+                      markers: _markers.values.toSet(),
+                      initialCameraPosition: CameraPosition(
+                          target: LatLng(currentLatitude, currentLongitude),
+                          zoom: 17),
+                      onMapCreated: (m) async {
+                      await  FirebaseDatabase.instance
+                            .reference()
+                            .child(widget.deviceid)
+                            .onValue
+                            .listen((event) {
+                          setState(() {
+                            currentLatitude = event.snapshot.value['latitude'];
+                            currentLongitude =
+                                event.snapshot.value['longitude'];
+                          });
+                        });
+                      }),
                 ),
               ),
               Container(
