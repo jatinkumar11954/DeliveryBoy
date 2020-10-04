@@ -17,8 +17,18 @@ class HomeScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-ClipRRect(borderRadius: BorderRadius.circular(5),
-  child: Container(width: w*0.8,child: RaisedButton(onPressed: (){},child: Text("Checkout"),),)),
+          ClipRRect(
+              borderRadius: BorderRadius.circular(25),
+              child: Container(
+                width: w * 0.7,
+                height: 50,
+                child: RaisedButton(
+                                  color: Colors.redAccent,
+
+                  onPressed: () {},
+                  child: Text("Checkout"),
+                ),
+              )),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -49,7 +59,7 @@ ClipRRect(borderRadius: BorderRadius.circular(5),
                     child: CircleAvatar(
                       backgroundColor: Colors.green,
                       radius: 5,
-                      child: Icon(Icons.new_releases),
+                      child: Icon(Icons.new_releases,color: Colors.white,size: 40,),
                     ),
                   ),
                   footer: Center(
@@ -84,17 +94,18 @@ ClipRRect(borderRadius: BorderRadius.circular(5),
                     child: CircleAvatar(
                       backgroundColor: Colors.green,
                       radius: 5,
-                      child: Icon(Icons.new_releases),
+                      child: Icon(Icons.bookmark,color: Colors.white,size: 40,),
                     ),
                   ),
                   footer: Center(
                     // padding: const EdgeInsets.only(top:5.0),
-                    child: Text("New Orders"),
+                    child: Text("Current Orders"),
                   ),
                 ),
               ),
             ],
-          ),   Row(
+          ),
+          Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -124,12 +135,12 @@ ClipRRect(borderRadius: BorderRadius.circular(5),
                     child: CircleAvatar(
                       backgroundColor: Colors.green,
                       radius: 5,
-                      child: Icon(Icons.new_releases),
+                      child: Icon(Icons.timer,color: Colors.white,size: 40,),
                     ),
                   ),
                   footer: Center(
                     // padding: const EdgeInsets.only(top:5.0),
-                    child: Text("New Orders"),
+                    child: Text("Past Orders"),
                   ),
                 ),
               ),
@@ -159,17 +170,18 @@ ClipRRect(borderRadius: BorderRadius.circular(5),
                     child: CircleAvatar(
                       backgroundColor: Colors.green,
                       radius: 5,
-                      child: Icon(Icons.new_releases),
+                      child: Icon(Icons.attach_money,color: Colors.white,size: 40,),
                     ),
                   ),
                   footer: Center(
                     // padding: const EdgeInsets.only(top:5.0),
-                    child: Text("New Orders"),
+                    child: Text("Wallet"),
                   ),
                 ),
               ),
             ],
-          ),   Row(
+          ),
+          Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -199,12 +211,12 @@ ClipRRect(borderRadius: BorderRadius.circular(5),
                     child: CircleAvatar(
                       backgroundColor: Colors.green,
                       radius: 5,
-                      child: Icon(Icons.new_releases),
+                      child: Icon(Icons.person,color: Colors.white,size: 40,),
                     ),
                   ),
                   footer: Center(
                     // padding: const EdgeInsets.only(top:5.0),
-                    child: Text("New Orders"),
+                    child: Text("Profile"),
                   ),
                 ),
               ),
@@ -234,19 +246,17 @@ ClipRRect(borderRadius: BorderRadius.circular(5),
                     child: CircleAvatar(
                       backgroundColor: Colors.green,
                       radius: 5,
-                      child: Icon(Icons.new_releases),
+                      child: Icon(Icons.info_outline,color: Colors.white,size: 40,),
                     ),
                   ),
                   footer: Center(
                     // padding: const EdgeInsets.only(top:5.0),
-                    child: Text("New Orders"),
+                    child: Text("Logout"),
                   ),
                 ),
               ),
             ],
           )
-       
-       
         ],
       ),
     );
