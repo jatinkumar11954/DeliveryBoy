@@ -58,12 +58,12 @@ class HomeScreen extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(25.0),
                     child: CircleAvatar(
-                      backgroundColor: Colors.green,
+                      backgroundColor: Color.fromRGBO(50,189,166,1),
                       radius: 5,
                       child: Icon(
                         Icons.new_releases,
                         color: Colors.white,
-                        size: 40,
+                        size: 50,
                       ),
                     ),
                   ),
@@ -97,12 +97,12 @@ class HomeScreen extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(25.0),
                     child: CircleAvatar(
-                      backgroundColor: Colors.green,
+                      backgroundColor: Color.fromRGBO(119,194,174,1),
                       radius: 5,
                       child: Icon(
                         Icons.bookmark,
                         color: Colors.white,
-                        size: 40,
+                        size: 50,
                       ),
                     ),
                   ),
@@ -142,12 +142,12 @@ class HomeScreen extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(25.0),
                     child: CircleAvatar(
-                      backgroundColor: Colors.green,
+                      backgroundColor: Color.fromRGBO(76,213,197,1),
                       radius: 5,
                       child: Icon(
                         Icons.timer,
                         color: Colors.white,
-                        size: 40,
+                        size: 50,
                       ),
                     ),
                   ),
@@ -181,12 +181,12 @@ class HomeScreen extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(25.0),
                     child: CircleAvatar(
-                      backgroundColor: Colors.green,
+                      backgroundColor: Color.fromRGBO(26,215,123,1),
                       radius: 5,
                       child: Icon(
                         Icons.attach_money,
                         color: Colors.white,
-                        size: 40,
+                        size: 50,
                       ),
                     ),
                   ),
@@ -226,12 +226,12 @@ class HomeScreen extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(25.0),
                     child: CircleAvatar(
-                      backgroundColor: Colors.green,
+                      backgroundColor: Color.fromRGBO(107,176,209,1),
                       radius: 5,
                       child: Icon(
                         Icons.person,
                         color: Colors.white,
-                        size: 40,
+                        size: 50,
                       ),
                     ),
                   ),
@@ -265,12 +265,12 @@ class HomeScreen extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(25.0),
                     child: CircleAvatar(
-                      backgroundColor: Colors.green,
+                      backgroundColor: Color.fromRGBO(221,87,75,1),
                       radius: 5,
                       child: Icon(
                         Icons.info_outline,
                         color: Colors.white,
-                        size: 40,
+                        size: 50,
                       ),
                     ),
                   ),

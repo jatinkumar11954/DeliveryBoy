@@ -24,16 +24,10 @@ class MapsReceiverState extends State<MapsReceiver> {
   StreamSubscription subscription;
 
   Map<String, double> currentLocation = new Map();
-  StreamSubscription<Map<String, double>> locationSubcription;
+  var locationSubcription;
 
   Location location = new Location();
   String error;
-
-  @override
-  void dispose() {
-    subscription.cancel();
-    super.dispose();
-  }
 
   @override
   void initState() {
@@ -52,7 +46,7 @@ class MapsReceiverState extends State<MapsReceiver> {
       _markers.clear();
       final marker = Marker(
         markerId: MarkerId("curr_loc"),
-        position: LatLng(currentLatitude, currentLongitude),
+        position: LatLng(currentLatitude ?? 0, currentLongitude ?? 0),
         infoWindow: InfoWindow(title: 'Delivery'),
       );
       _markers["Current Location"] = marker;
@@ -64,6 +58,12 @@ class MapsReceiverState extends State<MapsReceiver> {
       mapController = controller;
     });
   }
+
+  // @override
+  // void dispose() {
+  //   super.dispose();
+  //   currentLatitude.truncate();
+  // }
 
   Location locationobj = Location();
 
@@ -85,7 +85,7 @@ class MapsReceiverState extends State<MapsReceiver> {
                           target: LatLng(currentLatitude, currentLongitude),
                           zoom: 17),
                       onMapCreated: (m) async {
-                      await  FirebaseDatabase.instance
+                        await FirebaseDatabase.instance
                             .reference()
                             .child(widget.deviceid)
                             .onValue
@@ -96,6 +96,14 @@ class MapsReceiverState extends State<MapsReceiver> {
                                 event.snapshot.value['longitude'];
                           });
                         });
+                        _markers.clear();
+                        final marker = Marker(
+                          markerId: MarkerId("curr_loc"),
+                          position: LatLng(
+                              currentLatitude ?? 0, currentLongitude ?? 0),
+                          infoWindow: InfoWindow(title: 'Delivery'),
+                        );
+                        _markers["Current Location"] = marker;
                       }),
                 ),
               ),
