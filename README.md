@@ -1,6 +1,7 @@
 # DeliveryBoy
 
-A new Flutter project.
+A project with real time location feed
+Tracking of locatioin can be viewed from lidt of device id
 
 ## Getting Started
 
